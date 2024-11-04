@@ -29,8 +29,8 @@ public class MouseInput : MonoBehaviour
         transZ *= Time.deltaTime;
 
         // use transform to translate with values above
-
-        transform.Trnslate(transX, 0, transZ);
+        
+        transform.Translate(transX, 0, transZ);
 
         //Try Stretch Task in tutorial sheet
 
@@ -39,10 +39,10 @@ public class MouseInput : MonoBehaviour
         float distance_To_Screen = Camera.main.WorldScreenPoint(gameObject.transform.position).z;
 
 
-        vector3 pos_move = Camera.main.WorldScreenPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_To_Screen));
+        //vector3 pos_move = Camera.main.WorldScreenPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_To_Screen));
 
 
-        transform.position - new Vector3(pos_move.x, Transform.position.y, pos_move.z);
+        //transform.position - new Vector3(pos_move.x, Transform.position.y, pos_move.z);
 
      }
 
