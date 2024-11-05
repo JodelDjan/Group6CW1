@@ -34,16 +34,14 @@ public class MouseInput : MonoBehaviour
 
         //Try Stretch Task in tutorial sheet
 
+        // Calculate distance from camera to object
+        float distance_To_Screen = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
 
+        // Convert mouse position to world coordinates
+        Vector3 pos_move = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_To_Screen));
 
-        //float distance_To_Screen = Camera.main.WorldScreenPoint(gameObject.transform.position).z;
-
-
-        //vector3 pos_move = Camera.main.WorldScreenPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_To_Screen));
-
-
-        //transform.position - new Vector3(pos_move.x, Transform.position.y, pos_move.z);
-
-     }
+        // Set the object's position
+        transform.position = new Vector3(pos_move.x, transform.position.y, pos_move.z);
+    }
 
 }
