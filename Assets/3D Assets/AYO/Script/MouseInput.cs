@@ -36,7 +36,7 @@ public class MouseInput : MonoBehaviour
 
 
 
-        float distance_To_Screen = Camera.main.WorldScreenPoint(gameObject.transform.position).z;
+        //float distance_To_Screen = Camera.main.WorldScreenPoint(gameObject.transform.position).z;
 
 
         //vector3 pos_move = Camera.main.WorldScreenPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_To_Screen));
